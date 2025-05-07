@@ -2,9 +2,9 @@
 using LdfParser.Models;
 using LdfParser.Utils;
 
-namespace LdfParser;
+namespace LdfParser.Grammars;
 
-public class LdfGrammarVisitor : Grammars.LdfBaseVisitor<LdfFile>
+public class LdfGrammarVisitor : LdfBaseVisitor<LdfFile>
 {
     private readonly LdfFile _ldfFile = new();
 
@@ -63,7 +63,7 @@ public class LdfGrammarVisitor : Grammars.LdfBaseVisitor<LdfFile>
         var signal = new LdfSignal
         {
             Name = context.ldf_name(0).GetText(),
-            StartBit = int.Parse(context.ldf_int(0).GetText()),
+            SizeBit = int.Parse(context.ldf_int(0).GetText()),
             DefaultValue = int.Parse(context.ldf_int(1).GetText()),
             Senders = context.ldf_name(1).GetText(),
             Receiver = context.ldf_name().Skip(2).Select(x => x.GetText()).ToList()

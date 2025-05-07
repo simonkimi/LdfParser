@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LdfParser", "LdfParser\LdfParser.csproj", "{C32749A3-30D9-4E95-85CB-FA2A859FA19C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LdfParser.Runner", "LdfParser.Runner\LdfParser.Runner.csproj", "{B56A36AD-691F-4E82-B37F-46C9FB2A15D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C32749A3-30D9-4E95-85CB-FA2A859FA19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32749A3-30D9-4E95-85CB-FA2A859FA19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32749A3-30D9-4E95-85CB-FA2A859FA19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56A36AD-691F-4E82-B37F-46C9FB2A15D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56A36AD-691F-4E82-B37F-46C9FB2A15D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56A36AD-691F-4E82-B37F-46C9FB2A15D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56A36AD-691F-4E82-B37F-46C9FB2A15D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

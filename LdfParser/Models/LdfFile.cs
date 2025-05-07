@@ -6,9 +6,9 @@ namespace LdfParser.Models;
 [Serializable]
 public class LdfFile
 {
-    public string ProtocolVersion { get; set; }
-    public string LanguageVersion { get; set; }
-    public string Speed { get; set; }
+    public string ProtocolVersion { get; set; } = "";
+    public string LanguageVersion { get; set; } = "";
+    public string Speed { get; set; } = "";
     public List<LdfNode> MasterNodes { get; set; } = [];
     public List<LdfNode> SlaveNodes { get; set; } = [];
     public List<LdfNodeAttribute> NodeAttributes { get; set; } = [];

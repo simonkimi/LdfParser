@@ -1,21 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LdfParser.Models;
 
+[Serializable]
 public class LdfNode
 {
     /// <summary>
     /// 主机节点
     /// </summary>
-    public string Name { get; set; }
+    public required string Name { get; set; }
 }
 
+[Serializable]
 public class LdfNodeAttribute
 {
     /// <summary>
     /// 节点名称
     /// </summary>
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     /// <summary>
     /// Nad值

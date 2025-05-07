@@ -7,7 +7,7 @@ public class LdfFrame
     /// <summary>
     /// 帧名称
     /// </summary>
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     /// <summary>
     /// 帧ID
@@ -17,14 +17,14 @@ public class LdfFrame
     /// <summary>
     /// 发送节点
     /// </summary>
-    public string Sender { get; set; }
+    public required string Sender { get; set; }
 
     /// <summary>
     /// 数据段字节
     /// </summary>
     public int ByteSize { get; set; }
 
-    public List<LdfFrameSignal> Signals { get; set; }
+    public required List<LdfFrameSignal> Signals { get; set; }
 }
 
 public class LdfFrameSignal
@@ -32,7 +32,7 @@ public class LdfFrameSignal
     /// <summary>
     /// 信号名称
     /// </summary>
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     /// <summary>
     /// 偏移量
