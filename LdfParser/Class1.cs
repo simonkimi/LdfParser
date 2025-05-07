@@ -1,4 +1,6 @@
-﻿using Antlr4.Runtime;
+﻿using System;
+using Antlr4.Runtime;
+using LdfParser;
 using LdfParser.Grammars;
 
 var stream =
@@ -9,3 +11,12 @@ var tokens = new CommonTokenStream(lexer);
 var parser = new LdfParser.Grammars.LdfParser(tokens);
 
 var result = parser.start();
+
+var visitor = new LdfGrammarVisitor();
+
+var ldf = visitor.Visit(result);
+
+Console.WriteLine(ldf);
+
+
+

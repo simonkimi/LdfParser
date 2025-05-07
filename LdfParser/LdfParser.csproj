@@ -4,6 +4,7 @@
         <TargetFramework>net45</TargetFramework>
         <LangVersion>preview</LangVersion>
         <OutputType>Exe</OutputType>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>

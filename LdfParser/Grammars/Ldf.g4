@@ -68,7 +68,8 @@ schedule_table_entry: ldf_name 'delay' ldf_float 'ms' SEMI;
 
 // Signal_encoding_types
 signal_encoding_types: 'Signal_encoding_types' '{' signal_encoding_type* '}';
-signal_encoding_type: ldf_name '{' (signal_encoding_logical_value | signal_encoding_physical_value)* '}';
+signal_encoding_type: ldf_name '{' signal_encoding_type_value* '}';
+signal_encoding_type_value: signal_encoding_logical_value | signal_encoding_physical_value;
 signal_encoding_logical_value: 'logical_value' ',' ldf_int ',' ldf_str SEMI;
 signal_encoding_physical_value: 'physical_value' ',' ldf_int ',' ldf_int ',' ldf_float ',' ldf_float ',' ldf_str SEMI;
 
@@ -80,8 +81,8 @@ signal_representation_definition: ldf_name ':' ldf_name (',' ldf_name)* SEMI;
 ldf_name: CNAME;
 ldf_int: C_INT;
 ldf_float: C_FLOAT | C_INT;
-ldf_str: ESCAPED_STRING;
 ldf_version: LIN_VERSION | ISO_VERSION | J2602_VERSION;
+ldf_str: ESCAPED_STRING | ldf_version;
 
 // Symbols
 EQ: '=';
