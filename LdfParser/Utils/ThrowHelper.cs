@@ -7,9 +7,6 @@ public static class ThrowHelper
 {
     public static void IfNull(object? value, [CallerMemberName] string? paramName = null)
     {
-        if (value is null)
-        {
-            throw new ArgumentNullException(paramName);
-        }
+        if (value is null) throw new ArgumentNullException(paramName);
     }
 }

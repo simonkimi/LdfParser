@@ -10,7 +10,7 @@ public class LdfFileParser(ICharStream stream)
     {
         var lexer = new LdfLexer(stream);
         var tokens = new CommonTokenStream(lexer);
-        var parser = new LdfParser.Grammars.LdfParser(tokens);
+        var parser = new Grammars.LdfParser(tokens);
         var result = parser.start();
         var visitor = new LdfGrammarVisitor();
         return visitor.Visit(result);
