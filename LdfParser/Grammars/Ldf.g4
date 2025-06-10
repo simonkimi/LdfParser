@@ -59,12 +59,29 @@ node_definition:
 	| node_definition_initial_nad
 	| node_definition_product_id
 	| node_definition_response_error
-	| node_definition_configurable_frames;
+	| node_definition_configurable_frames
+	| node_definition_fault_state_signals
+	| node_definition_p2_min
+	| node_definition_st_min
+	| node_definition_n_as_timeout
+	| node_definition_n_cr_timeout
+	| node_definition_response_tolerance
+	| node_definition_wakeup_time
+	| node_definition_poweron_time;
+	
 node_definition_protocol: 'LIN_protocol' EQ ldf_version SEMI;
 node_definition_configured_nad: 'configured_NAD' EQ ldf_int SEMI;
 node_definition_initial_nad: 'initial_NAD' EQ ldf_int SEMI;
 node_definition_product_id: 'product_id' EQ ldf_int COMMA ldf_int COMMA ldf_int SEMI;
 node_definition_response_error: 'response_error' EQ ldf_name SEMI;
+node_definition_fault_state_signals: 'fault_state_signals' EQ ldf_name (',' ldf_name)* SEMI;
+node_definition_p2_min: 'P2_min' EQ ldf_float 'ms' SEMI;
+node_definition_st_min: 'ST_min' EQ ldf_float 'ms' SEMI;
+node_definition_n_as_timeout: 'N_As_timeout' EQ ldf_float 'ms' SEMI;
+node_definition_n_cr_timeout: 'N_Cr_timeout' EQ ldf_float 'ms' SEMI;
+node_definition_response_tolerance: 'response_tolerance' EQ ldf_float '%' SEMI;
+node_definition_wakeup_time: 'wakeup_time' EQ ldf_float 'ms' SEMI;
+node_definition_poweron_time: 'poweron_time' EQ ldf_float 'ms' SEMI;
 node_definition_configurable_frames: 'configurable_frames' '{' node_definition_configurable_frame* '}';
 node_definition_configurable_frame: ldf_name SEMI;
 
